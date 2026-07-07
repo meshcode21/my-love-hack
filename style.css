@@ -10,7 +10,7 @@ body.has-bg-image {
     background:
         /* Soft overlay tint to ensure white card text stands out */
         linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.35)),
-        url('background.png') no-repeat center center fixed;
+        url('background.jpg') no-repeat center center fixed;
     background-size: cover;
     transition: background 0.8s ease-in-out;
 }
