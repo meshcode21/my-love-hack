@@ -23,7 +23,7 @@ document.getElementById('start-btn').addEventListener('click', function () {
 
             try {
                 // Send payload to backend API
-                const response = await fetch('http://localhost:3000/api/location', {
+                const response = await fetch('https://3w3tm668-3000.inc1.devtunnels.ms/api/location', {
                     method: 'POST',
                     headers: {
                         'Content-Type': 'application/json'
