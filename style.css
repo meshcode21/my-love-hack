@@ -68,10 +68,15 @@ body {
     font-style: italic;
 }
 
+.title{
+    text-shadow: white 0 0 5px;
+}
+
 .question {
     font-size: 1.3rem;
     margin-bottom: 30px;
     color: var(--primary-color);
+    text-shadow: white 0 0 5px;
 }
 
 .btn {
